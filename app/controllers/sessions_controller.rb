@@ -8,8 +8,10 @@ class SessionsController < ApplicationController
     params
     binding.pry
     if session[:name] && session[:name] != ''
-      session[:name] = params[:name]
-      redirect_to '/'
+      if session[:name] = params[:name]
+        redirect_to '/'
+      else
+        redirect_to 'new'
     else
       redirect_to '/login'
     end
