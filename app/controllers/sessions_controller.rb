@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         redirect_to '/'
       else
         params[:name] = session[:name]
-        redirect_to '/new'
+        redirect_to '/'
       end
     else
       redirect_to '/login'
