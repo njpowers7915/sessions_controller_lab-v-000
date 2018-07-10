@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
         redirect_to '/'
       else
         params[:name] = session[:name]
+        binding.pry
         redirect_to '/'
       end
     else
