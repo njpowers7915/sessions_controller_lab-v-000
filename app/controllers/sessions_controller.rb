@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if session[:name] && session[:name] != ''
       session[:name] = params[:name]
       redirect_to '/'
+    binding.pry
     else
       redirect_to '/login'
     end
