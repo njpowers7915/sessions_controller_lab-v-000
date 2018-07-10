@@ -5,6 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def create
+    params
+    binding.pry
     if session[:name] && session[:name] != ''
       session[:name] = params[:name]
       binding.pry
