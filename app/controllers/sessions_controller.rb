@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
   def create
     if session[:name] && session[:name] != ''
       session[:name] = params[:name]
+      binding.pry
       redirect_to '/'
-    binding.pry
     else
       redirect_to '/login'
     end
